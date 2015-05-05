@@ -80,13 +80,14 @@ int main()
 				printf("ERROR: could not get current working directory\n");
 			continue;
 		}
+		
+		
 		parse(cmd,args);
-		if(!strcmp(args[0],"cd"))
+		if(!strcmp(args[0],"cd")
 		{
 			if(!chdir(args[1]));
 			else
 			printf("ERROR: could not change working directory\n");
-			continue;
 		}
 		_execute(args);
 	}
