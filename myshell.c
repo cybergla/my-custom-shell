@@ -106,8 +106,11 @@ int main()
 	char cmd[100];
 	char hist[10][100];
 	char *args[15];
-	char wd_path[1024];
-	if(chdir("/home/tanay"))		
+	char wd_path[1024] = {"/home/"};
+	char uid[100];
+	cuserid(uid);
+	strcat(wd_path,uid);
+	if(chdir(wd_path))		
 		printf("ERROR: could not change working directory\n");
 	
 	printf("\n**********Tanay's SHELL*************");
